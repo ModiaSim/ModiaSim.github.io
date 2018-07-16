@@ -37,7 +37,7 @@ import ModiaMath
    end
 end
 
-result = simulate(FirstOrder, stopTime=2.0)
+result = simulateModel(FirstOrder, linspace(0,2,500))
 ModiaMath.plot(result, "x")
 </pre>
 </body></html>.
