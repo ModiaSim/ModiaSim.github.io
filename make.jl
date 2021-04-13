@@ -1,4 +1,4 @@
-using Documenter, TinyModia, ModiaPlot
+using Documenter
 
 makedocs(
   sitename = "ModiaSim",
