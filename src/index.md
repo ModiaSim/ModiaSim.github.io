@@ -86,14 +86,13 @@ in the following way:
 
 ```julia
 using Measurements
-pendulumWithUncertainties =  @instantiateModel(Pendulum |
-                                Map(L = (0.8 ± 0.2)u"m",
-                                    m = (1.0 ± 0.2)u"kg",
-                                    d = (0.5 ± 0.2)u"N*m*s/rad"),
-                                FloatType = Measurement{Float64})
-
-simulate!(pendulumWithUncertainties, Tsit5(), stopTime = 10.0u"s")
-plot(pendulumWithUncertainties, [("phi", "w"); "r"], figure=2)
+PendulumWithUncertainties = Pendulum | Map(L = (0.8 ± 0.2)u"m",
+                                           m = (1.0 ± 0.2)u"kg",
+                                           d = (0.5 ± 0.2)u"N*m*s/rad")
+pendulum2 =  @instantiateModel(PendulumWithUncertainties,
+                               FloatType = Measurement{Float64})
+simulate!(pendulum2, Tsit5(), stopTime = 10.0u"s")
+plot(pendulum2, [("phi", "w"); "r"], figure = 2)
 ```
 
 resulting in the following plot:
