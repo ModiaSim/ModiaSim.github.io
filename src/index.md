@@ -98,3 +98,5 @@ plot(pendulum2, [("phi", "w"); "r"], figure = 2)
 resulting in the following plot:
 
 ![PendulumWithUncertainty](../resources/images/PendulumWithUncertainties.png)
+
+For more details and examples, see the [Tutorial](https://modiasim.github.io/TinyModia.jl/stable/Tutorial.html).
