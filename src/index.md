@@ -5,7 +5,7 @@
 
 | Package                                                  | Description |
 |:---------------------------------------------------------|:----------- |
-| [TinyModia.jl](https://github.com/ModiaSim/TinyModia.jl) | Component- and equation-based modeling of multidomain engineering systems           |
+| [ModiaLang.jl](https://github.com/ModiaSim/ModiaLang.jl) | Component- and equation-based modeling of multidomain engineering systems           |
 | [ModiaPlot.jl](https://github.com/ModiaSim/ModiaPlot.jl) | Convenient line plots of time series data identified by string keys (using [GLMakie](https://github.com/JuliaPlots/GLMakie.jl)) |
 | [ModiaBase.jl](https://github.com/ModiaSim/ModiaBase.jl) | Core algorithms for equation-based modeling                                         |
 
@@ -22,7 +22,7 @@ The following packages are outdated and should not be used (they are currently r
 The packages require Julia 1.5 or 1.6. They are registered and can be installed with:
 
 ```julia
-julia> ]add ModiaBase, ModiaPlot, TinyModia
+julia> ]add ModiaBase, ModiaPlot, ModiaLang
 ```
 
 
@@ -53,7 +53,7 @@ where ``\varphi`` is the rotation angle, ``\omega`` the angular velocity,
 to the tip of the pendulum. These equations can be defined, simulated and plotted with:
 
 ```julia
-using TinyModia, Unitful, ModiaPlot
+using ModiaLangModia, Unitful, ModiaPlot
 using DifferentialEquations
 
 Pendulum = Model(
@@ -99,4 +99,4 @@ resulting in the following plot:
 
 ![PendulumWithUncertainty](../resources/images/PendulumWithUncertainties.png)
 
-For more details and examples, see the [Tutorial](https://modiasim.github.io/TinyModia.jl/stable/Tutorial.html).
+For more details and examples, see the [Tutorial](https://modiasim.github.io/ModiaLang.jl/stable/Tutorial.html).
